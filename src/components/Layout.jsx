@@ -27,8 +27,8 @@ const Layout = () => {
         <Link to="/home" className="flex items-center gap-2">
           <img
             src={isDark
-              ? "/src/assets/images/Znajdź mieszkanie, które naprawdę pasuje.png"
-              : "/src/assets/images/Znajdź mieszkanie, które naprawdę pasuje 2.png"
+              ? "/images/Znajdź mieszkanie, które naprawdę pasuje.png"
+              : "/images/Znajdź mieszkanie, które naprawdę pasuje 2.png"
             }
             alt="Logo"
             className="w-10 h-10 object-contain"

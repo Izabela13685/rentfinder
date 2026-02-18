@@ -46,7 +46,7 @@ const SplashScreen = () => {
       <div>
         {/* Custom GIF Logo */}
         <img
-          src="/src/assets/images/Znajdź mieszkanie, które naprawdę pasuje.gif"
+          src="/images/Znajdź mieszkanie, które naprawdę pasuje.gif"
           alt="Logo"
           className="object-contain"
           style={{ width: '500px', height: '500px', marginBottom: '-100px' }}
