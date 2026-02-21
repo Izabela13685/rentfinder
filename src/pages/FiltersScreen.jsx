@@ -53,6 +53,20 @@ const FiltersScreen = () => {
     });
   };
 
+  const roomOptions = [1, 2, 3, '4+'];
+
+  const isRoomActive = (value) => localFilters.rooms.includes(value);
+
+  const toggleRoom = (value) => {
+    setLocalFilters(prev => {
+      const exists = prev.rooms.includes(value);
+      return {
+        ...prev,
+        rooms: exists ? prev.rooms.filter(r => r !== value) : [...prev.rooms, value]
+      };
+    });
+  };
+
   const handleApply = () => {
     setFilters(localFilters);
     navigate('/home');
@@ -63,6 +77,7 @@ const FiltersScreen = () => {
       const newState = { ...prev };
       if (activeTab === 'price') newState.priceRange = [0, 10000];
       else if (activeTab === 'area') newState.areaRange = [0, 200];
+      else if (activeTab === 'rooms') newState.rooms = [];
       else if (activeTab === 'amenities') newState.amenities = [];
       return newState;
     });
@@ -80,6 +95,7 @@ const FiltersScreen = () => {
         <h1 className="text-lg font-semibold ml-4">
           {activeTab === 'price' && 'Cena'}
           {activeTab === 'area' && 'Metraż'}
+          {activeTab === 'rooms' && 'Pokoje'}
           {activeTab === 'amenities' && 'Udogodnienia'}
         </h1>
       </div>
@@ -132,6 +148,29 @@ const FiltersScreen = () => {
                     className="w-full bg-[#1A2C42] p-3 rounded-xl border border-transparent focus:border-[#2B7FFF] outline-none text-white transition-colors"
                   />
                 </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'rooms' && (
+            <div id="pokoje-content" className="animate-fade-in">
+              <p className="text-sm text-[#8E9BAE] mb-4">Wybierz liczbę pokoi</p>
+              <div className="flex gap-3">
+                {roomOptions.map((value) => {
+                  const active = isRoomActive(value);
+                  return (
+                    <button
+                      key={value}
+                      onClick={() => toggleRoom(value)}
+                      className={`flex-1 py-4 rounded-2xl text-lg font-bold transition-all duration-200 border ${active
+                        ? 'bg-[#2B7FFF] border-[#2B7FFF] text-white shadow-[0_4px_12px_rgba(43,127,255,0.4)]'
+                        : 'bg-[#1A2C42] border-[#2B7FFF]/10 text-white hover:bg-[#233a54]'
+                        }`}
+                    >
+                      {value}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}

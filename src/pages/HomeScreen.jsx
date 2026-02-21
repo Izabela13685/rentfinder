@@ -13,6 +13,7 @@ const HomeScreen = () => {
   const isPriceActive = filters.priceRange[0] > 0 || filters.priceRange[1] < 10000;
   const isAreaActive = filters.areaRange[0] > 0 || filters.areaRange[1] < 200;
   const isAmenitiesActive = filters.amenities.length > 0;
+  const isRoomsActive = filters.rooms.length > 0;
 
   const [activeFilter, setActiveFilter] = useState('Wszystkie');
   const typeFilters = ['Wszystkie', 'Apartament', 'Mieszkanie', 'Kawalerka', 'Studio', 'Loft', 'Penthouse'];
@@ -78,6 +79,15 @@ const HomeScreen = () => {
             }`}
         >
           Metraż
+        </button>
+        <button
+          onClick={() => navigate('/filters', { state: { tab: 'rooms' } })}
+          className={`px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors shadow-sm ${isRoomsActive
+            ? 'bg-[#2B7FFF] text-white shadow-blue-500/20'
+            : 'bg-white dark:bg-[#1A2C42] text-gray-600 dark:text-[#8E9BAE] hover:bg-gray-100 dark:hover:bg-[#233a54]'
+            }`}
+        >
+          Pokoje
         </button>
         <button
           onClick={() => navigate('/filters', { state: { tab: 'amenities' } })}
