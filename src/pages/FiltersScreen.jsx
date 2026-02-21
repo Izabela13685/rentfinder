@@ -15,7 +15,7 @@ const FiltersScreen = () => {
   const inactiveIconClass = "text-white"; // Changed to white as requested (differentiation via bg color)
 
   const getIcon = (name, active) => {
-    const cls = `w-8 h-8 ${active ? activeIconClass : inactiveIconClass}`;
+    const cls = `w-8 h-8 md:w-5 md:h-5 ${active ? activeIconClass : inactiveIconClass}`;
     const strokeWidth = 2.5; // Thicker stroke as requested
 
     switch (name) {
@@ -138,22 +138,22 @@ const FiltersScreen = () => {
 
           {activeTab === 'amenities' && (
             <div id="udogodnienia-content" className="animate-fade-in flex flex-col items-center">
-              <div className="grid grid-cols-3 gap-3 w-full">
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-3 md:gap-2 w-full">
                 {amenitiesList.map((name) => {
                   const active = isAmenityActive(name);
                   return (
                     <button
                       key={name}
                       onClick={() => toggleAmenity(name)}
-                      className={`aspect-square flex flex-col items-center justify-center p-2 rounded-2xl transition-all duration-200 border ${active
+                      className={`aspect-square flex flex-col items-center justify-center p-2 md:p-1.5 rounded-2xl md:rounded-xl transition-all duration-200 border ${active
                         ? 'bg-[#2B7FFF] border-[#2B7FFF] shadow-[0_4px_12px_rgba(43,127,255,0.4)]'
                         : 'bg-[#1A2C42] border-[#2B7FFF]/10 hover:bg-[#233a54]'
                         }`}
                     >
-                      <div className="mb-2">
+                      <div className="mb-2 md:mb-1">
                         {getIcon(name, active)}
                       </div>
-                      <span className="text-xs font-bold text-center leading-tight text-white">
+                      <span className="text-xs md:text-[10px] font-bold text-center leading-tight text-white">
                         {name}
                       </span>
                     </button>
