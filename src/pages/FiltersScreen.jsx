@@ -67,6 +67,20 @@ const FiltersScreen = () => {
     });
   };
 
+  const floorOptions = [0, 1, 2, 3, 4, '5+'];
+
+  const isFloorActive = (value) => localFilters.floor.includes(value);
+
+  const toggleFloor = (value) => {
+    setLocalFilters(prev => {
+      const exists = prev.floor.includes(value);
+      return {
+        ...prev,
+        floor: exists ? prev.floor.filter(f => f !== value) : [...prev.floor, value]
+      };
+    });
+  };
+
   const handleApply = () => {
     setFilters(localFilters);
     navigate('/home');
@@ -78,6 +92,7 @@ const FiltersScreen = () => {
       if (activeTab === 'price') newState.priceRange = [0, 10000];
       else if (activeTab === 'area') newState.areaRange = [0, 200];
       else if (activeTab === 'rooms') newState.rooms = [];
+      else if (activeTab === 'floor') newState.floor = [];
       else if (activeTab === 'amenities') newState.amenities = [];
       return newState;
     });
@@ -96,6 +111,7 @@ const FiltersScreen = () => {
           {activeTab === 'price' && 'Cena'}
           {activeTab === 'area' && 'Metraż'}
           {activeTab === 'rooms' && 'Pokoje'}
+          {activeTab === 'floor' && 'Piętro'}
           {activeTab === 'amenities' && 'Udogodnienia'}
         </h1>
       </div>
@@ -163,6 +179,29 @@ const FiltersScreen = () => {
                       key={value}
                       onClick={() => toggleRoom(value)}
                       className={`flex-1 py-4 rounded-2xl text-lg font-bold transition-all duration-200 border ${active
+                        ? 'bg-[#2B7FFF] border-[#2B7FFF] text-white shadow-[0_4px_12px_rgba(43,127,255,0.4)]'
+                        : 'bg-[#1A2C42] border-[#2B7FFF]/10 text-white hover:bg-[#233a54]'
+                        }`}
+                    >
+                      {value}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'floor' && (
+            <div id="pietro-content" className="animate-fade-in">
+              <p className="text-sm text-[#8E9BAE] mb-4">Wybierz piętro</p>
+              <div className="flex gap-3 flex-wrap">
+                {floorOptions.map((value) => {
+                  const active = isFloorActive(value);
+                  return (
+                    <button
+                      key={value}
+                      onClick={() => toggleFloor(value)}
+                      className={`flex-1 min-w-[50px] py-4 rounded-2xl text-lg font-bold transition-all duration-200 border ${active
                         ? 'bg-[#2B7FFF] border-[#2B7FFF] text-white shadow-[0_4px_12px_rgba(43,127,255,0.4)]'
                         : 'bg-[#1A2C42] border-[#2B7FFF]/10 text-white hover:bg-[#233a54]'
                         }`}

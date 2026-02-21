@@ -19,6 +19,7 @@ export const DataProvider = ({ children }) => {
     priceRange: [0, 10000],
     areaRange: [0, 200],
     rooms: [],
+    floor: [],
     amenities: []
   };
 
@@ -106,7 +107,14 @@ export const DataProvider = ({ children }) => {
         if (!matchesExact && !matchesPlus) return false;
       }
 
-      // 4. Amenities
+      // 4. Floor
+      if (filters.floor.length > 0) {
+        const matchesExact = filters.floor.includes(item.floor);
+        const matchesPlus = filters.floor.includes('5+') && item.floor >= 5;
+        if (!matchesExact && !matchesPlus) return false;
+      }
+
+      // 5. Amenities
       if (filters.amenities.length > 0) {
         // If item has NO amenities property, exclude if we require some
         if (!item.amenities) return false;
