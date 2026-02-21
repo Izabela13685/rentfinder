@@ -49,9 +49,9 @@ const Layout = () => {
       </nav>
 
       {/* Main Content Wrapper - STRICT 20px PADDING & MAX WIDTH */}
-      <div className={`w-full mx-auto ${location.pathname === '/map' ? '' : 'px-[20px] pb-20'}`}>
+      <main className={`w-full mx-auto ${location.pathname === '/map' ? '' : 'px-[20px] pb-20'}`}>
         <Outlet />
-      </div>
+      </main>
 
       {!shouldHideBottomNav && (
         <div className="md:hidden fixed bottom-0 w-full z-50">

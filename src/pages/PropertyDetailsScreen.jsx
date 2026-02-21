@@ -158,7 +158,8 @@ const PropertyDetailsScreen = () => {
           {/* Back Button */}
           <button
             onClick={() => navigate(-1)}
-            className="bg-black/40 backdrop-blur-md p-2 rounded-full text-white w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
+            aria-label="Wróć"
+            className="bg-black/40 backdrop-blur-md p-2 rounded-full text-white w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors min-h-[44px] min-w-[44px]"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -169,7 +170,8 @@ const PropertyDetailsScreen = () => {
           <div className="flex gap-3">
             <button
               onClick={handleFavoriteClick}
-              className="bg-black/40 backdrop-blur-md p-2 rounded-full text-white w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
+              aria-label="Dodaj do ulubionych"
+              className="bg-black/40 backdrop-blur-md p-2 rounded-full text-white w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors min-h-[44px] min-w-[44px]"
             >
               <svg
                 className={`w-6 h-6 ${favorite ? 'text-[#00E0FF] fill-current' : 'text-white'}`}
@@ -182,7 +184,8 @@ const PropertyDetailsScreen = () => {
             </button>
             <button
               onClick={handleShare}
-              className="bg-black/40 backdrop-blur-md p-2 rounded-full text-white w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
+              aria-label="Udostępnij"
+              className="bg-black/40 backdrop-blur-md p-2 rounded-full text-white w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors min-h-[44px] min-w-[44px]"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -190,7 +193,8 @@ const PropertyDetailsScreen = () => {
             </button>
             <button
               onClick={handleMenu}
-              className="bg-black/40 backdrop-blur-md p-2 rounded-full text-white w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
+              aria-label="Więcej opcji"
+              className="bg-black/40 backdrop-blur-md p-2 rounded-full text-white w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors min-h-[44px] min-w-[44px]"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -207,7 +211,8 @@ const PropertyDetailsScreen = () => {
               e.stopPropagation();
               setCurrentImageIndex(prev => prev - 1);
             }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/60 z-30 transition-all opacity-0 group-hover:opacity-100"
+            aria-label="Poprzednie zdjęcie"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/60 z-30 transition-all opacity-0 group-hover:opacity-100 min-h-[44px] min-w-[44px]"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
           </button>
@@ -220,7 +225,8 @@ const PropertyDetailsScreen = () => {
               e.stopPropagation();
               setCurrentImageIndex(prev => prev + 1);
             }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/60 z-30 transition-all opacity-0 group-hover:opacity-100"
+            aria-label="Następne zdjęcie"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/60 z-30 transition-all opacity-0 group-hover:opacity-100 min-h-[44px] min-w-[44px]"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
           </button>

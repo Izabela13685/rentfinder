@@ -100,7 +100,7 @@ const PrivacyScreen = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-[#112334] text-gray-900 dark:text-white transition-colors duration-300 pb-10">
       {/* Header */}
       <div className="bg-white dark:bg-[#1A2C42] px-4 py-4 flex items-center shadow-sm sticky top-0 z-10 transition-colors duration-300">
-        <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5">
+        <button onClick={() => navigate(-1)} aria-label="Wróć" className="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 min-h-[44px] min-w-[44px] flex items-center justify-center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5M12 19l-7-7 7-7" />
           </svg>

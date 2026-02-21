@@ -52,7 +52,7 @@ const HomeScreen = () => {
         </svg>
 
         {/* Collapse icon / Filter trigger */}
-        <button className="absolute right-4 top-1/2 -translate-y-1/2">
+        <button className="absolute right-4 top-1/2 -translate-y-1/2 min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Wyczyść wyszukiwanie">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9BAE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500 dark:text-[#8E9BAE]">
             <path d="M6 9l6 6 6-6" />
           </svg>

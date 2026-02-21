@@ -72,7 +72,7 @@ const FiltersScreen = () => {
     <div className="min-h-screen bg-[#112334] text-white flex flex-col font-sans">
       {/* Header */}
       <div className="bg-[#1A2C42] px-4 py-4 flex items-center shadow-sm z-10">
-        <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white">
+        <button onClick={() => navigate(-1)} aria-label="Wróć" className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white min-h-[44px] min-w-[44px] flex items-center justify-center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5M12 19l-7-7 7-7" />
           </svg>

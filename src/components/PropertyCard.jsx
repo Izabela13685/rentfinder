@@ -34,7 +34,8 @@ const PropertyCard = ({ property }) => {
         {/* Heart Icon - Top Right */}
         <button
           onClick={handleFavoriteClick}
-          className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm rounded-full p-2.5 transition-all text-white hover:bg-black/50"
+          aria-label="Dodaj do ulubionych"
+          className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm rounded-full p-2.5 transition-all text-white hover:bg-black/50 min-h-[44px] min-w-[44px] flex items-center justify-center"
         >
           {favorite ? (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#00E0FF]" viewBox="0 0 20 20" fill="currentColor">

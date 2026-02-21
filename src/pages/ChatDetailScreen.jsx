@@ -38,7 +38,7 @@ const ChatDetailScreen = () => {
     <div className="flex flex-col h-[100dvh] md:h-[calc(100vh-80px)] bg-gray-50 dark:bg-[#112334] text-gray-900 dark:text-white transition-colors duration-300">
       {/* Header */}
       <div className="bg-white dark:bg-[#1A2C42] px-4 py-3 flex items-center gap-3 shadow-sm sticky top-0 z-10 border-b border-gray-200 dark:border-[#233a54] transition-colors duration-300">
-        <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+        <button onClick={() => navigate(-1)} aria-label="Wróć" className="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5M12 19l-7-7 7-7" />
           </svg>
@@ -97,7 +97,8 @@ const ChatDetailScreen = () => {
         />
         <button
           type="submit"
-          className="bg-[#2B7FFF] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#00c2dd] transition-all shadow-lg active:scale-95"
+          aria-label="Wyślij wiadomość"
+          className="bg-[#2B7FFF] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#00c2dd] transition-all shadow-lg active:scale-95 min-h-[44px] min-w-[44px]"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="22" y1="2" x2="11" y2="13"></line>

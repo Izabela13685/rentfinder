@@ -26,7 +26,7 @@ export default {
         },
 
         // Text
-        textGrey: '#8E9BAE',
+        textGrey: '#A3B1C6',
       },
       fontFamily: {
         sans: ['Urbanist', 'sans-serif'],

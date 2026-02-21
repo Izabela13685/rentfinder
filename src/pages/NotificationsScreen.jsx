@@ -14,12 +14,12 @@ const NotificationsScreen = () => {
     <div className="min-h-screen bg-background-light dark:bg-background-dark">
       <div className="px-5 py-6 max-w-2xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <button onClick={() => navigate('/settings')}>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-6 w-6 text-gray-900 dark:text-white" 
-              fill="none" 
-              viewBox="0 0 24 24" 
+          <button onClick={() => navigate('/settings')} aria-label="Wróć" className="min-h-[44px] min-w-[44px] flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-gray-900 dark:text-white"
+              fill="none"
+              viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -32,9 +32,8 @@ const NotificationsScreen = () => {
           {notifications.map((notif) => (
             <div
               key={notif.id}
-              className={`bg-surface-light dark:bg-surface-dark rounded-button p-4 ${
-                notif.unread ? 'border-l-4 border-primary' : ''
-              }`}
+              className={`bg-surface-light dark:bg-surface-dark rounded-button p-4 ${notif.unread ? 'border-l-4 border-primary' : ''
+                }`}
             >
               <div className="flex justify-between items-start mb-2">
                 <h3 className="text-gray-900 dark:text-white font-semibold">{notif.title}</h3>
