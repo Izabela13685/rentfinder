@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rentfinder.vercel.app/sitemap.xml
