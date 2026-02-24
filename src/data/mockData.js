@@ -15,7 +15,7 @@ export const initialListings = [
         lng: 21.0122,
         coordinates: { lat: 52.2297, lng: 21.0122 },
         description: "Piękny apartament w samym sercu Warszawy, blisko metra i Starego Miasta.",
-        amenities: ['Wifi', 'Klimatyzacja', 'Zmywarka', 'Winda']
+        amenities: ['Światłowód', 'Klimatyzacja', 'Zmywarka', 'Winda']
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ export const initialListings = [
         lng: 21.0118,
         coordinates: { lat: 52.2000, lng: 21.0118 },
         description: "Cicha i spokojna okolica, blisko parku i komunikacji miejskiej.",
-        amenities: ['Balkon', 'Zwierzęta', 'Piwnica']
+        amenities: ['Balkon', 'Zwierzęta', 'Niepalący']
     },
     {
         id: 3,
@@ -51,7 +51,7 @@ export const initialListings = [
         lng: 21.0312,
         coordinates: { lat: 52.2390, lng: 21.0312 },
         description: "Luksusowy apartament z tarasem i niesamowitym widokiem.",
-        amenities: ['Klimatyzacja', 'Garaż', 'Smart Home', 'Winda', 'Taras']
+        amenities: ['Klimatyzacja', 'Garaż', 'Smart Home', 'Winda']
     },
     {
         id: 4,
@@ -69,7 +69,7 @@ export const initialListings = [
         lng: 21.0450,
         coordinates: { lat: 52.1480, lng: 21.0450 },
         description: "Idealne dla rodziny, blisko szkoły i metra.",
-        amenities: ['Garaż', 'Balkon', 'Winda', 'Plac zabaw']
+        amenities: ['Garaż', 'Balkon', 'Winda', 'Dostępność']
     },
     {
         id: 5,
@@ -87,7 +87,7 @@ export const initialListings = [
         lng: 21.0360,
         coordinates: { lat: 52.2540, lng: 21.0360 },
         description: "Artystyczny klimat, wysokie sufity, blisko Centrum Koneser.",
-        amenities: ['Internet', 'Biurko', 'Ochrona']
+        amenities: ['Światłowód', 'Biurko', 'Student']
     },
     {
         id: 6,
@@ -105,7 +105,7 @@ export const initialListings = [
         lng: 20.9650,
         coordinates: { lat: 52.2350, lng: 20.9650 },
         description: "Nowoczesne studio w nowym budownictwie, świetna lokalizacja.",
-        amenities: ['Winda', 'Balkon', 'Internet']
+        amenities: ['Winda', 'Balkon', 'Światłowód']
     },
     {
         id: 7,
@@ -123,7 +123,7 @@ export const initialListings = [
         lng: 19.9366,
         coordinates: { lat: 50.0614, lng: 19.9366 },
         description: "Stylowe mieszkanie w kamienicy, 5 min do Rynku Głównego.",
-        amenities: ['Wifi', 'Zmywarka', 'Historyczne wnętrze']
+        amenities: ['Światłowód', 'Zmywarka', 'Niepalący']
     },
     {
         id: 8,
@@ -141,7 +141,7 @@ export const initialListings = [
         lng: 19.9450,
         coordinates: { lat: 50.0520, lng: 19.9450 },
         description: "Klimatyczne mieszkanie w sercu dzielnicy żydowskiej.",
-        amenities: ['Balkon', 'Internet', 'Ogrzewanie miejskie']
+        amenities: ['Balkon', 'Światłowód', 'Student']
     },
     {
         id: 9,
@@ -159,7 +159,7 @@ export const initialListings = [
         lng: 17.0350,
         coordinates: { lat: 51.1150, lng: 17.0350 },
         description: "Przestronny loft z widokiem na rzekę.",
-        amenities: ['Klimatyzacja', 'Garaż', 'Garderoba']
+        amenities: ['Klimatyzacja', 'Garaż', 'Smart Home']
     },
     {
         id: 10,
@@ -177,7 +177,7 @@ export const initialListings = [
         lng: 18.5800,
         coordinates: { lat: 54.4000, lng: 18.5800 },
         description: "Luksusowy apartament blisko plaży.",
-        amenities: ['Balkon', 'Garaż', 'Winda', 'Sauna']
+        amenities: ['Balkon', 'Garaż', 'Winda', 'Dostępność']
     },
     {
         id: 11,
@@ -195,7 +195,7 @@ export const initialListings = [
         lng: 16.9050,
         coordinates: { lat: 52.4150, lng: 16.9050 },
         description: "Piękne mieszkanie w modnej dzielnicy.",
-        amenities: ['Internet', 'Piwnica', 'Gaz']
+        amenities: ['Światłowód', 'Zwierzęta', 'Biurko']
     },
     {
         id: 12,
@@ -213,7 +213,7 @@ export const initialListings = [
         lng: 16.9500,
         coordinates: { lat: 52.3900, lng: 16.9500 },
         description: "Idealna dla studenta, blisko uczelni i jeziora Malta.",
-        amenities: ['Internet', 'Winda', 'Blisko tramwaj']
+        amenities: ['Światłowód', 'Winda', 'Student']
     }
 ];
 
